@@ -231,23 +231,23 @@ def createGUI():
 
 
     #entry column
-    entry0 = ttk.Entry(window, justify='left',textvariable=a_var0,state=DISABLED)
-    entry0.grid(column=1,row=1,sticky=tk.W)
+    entry0 = ttk.Entry(window, justify='left',textvariable=a_var0,state=DISABLED, width=40)
+    entry0.grid(column=1,row=1,sticky=tk.W, columnspan=2)
 
-    entry1 = ttk.Entry(window, justify='left',textvariable=a_var1)
-    entry1.grid(column=1,row=2,sticky=tk.W)
+    entry1 = ttk.Entry(window, justify='left',textvariable=a_var1, width=40)
+    entry1.grid(column=1,row=2,sticky=tk.W, columnspan=2)
 
-    entry2 = ttk.Entry(window, justify='left',textvariable=a_var2)
-    entry2.grid(column=1,row=3,sticky=tk.W)
+    entry2 = ttk.Entry(window, justify='left',textvariable=a_var2, width=40)
+    entry2.grid(column=1,row=3,sticky=tk.W, columnspan=2)
 
-    entry3 = ttk.Entry(window, justify='left',textvariable=a_var3)
-    entry3.grid(column=1,row=4,sticky=tk.W)
+    entry3 = ttk.Entry(window, justify='left',textvariable=a_var3, width=40)
+    entry3.grid(column=1,row=4,sticky=tk.W, columnspan=2)
 
-    entry4 = ttk.Entry(window, justify='left',textvariable=a_var4)
-    entry4.grid(column=1,row=5,sticky=tk.W)
+    entry4 = ttk.Entry(window, justify='left',textvariable=a_var4, width=40)
+    entry4.grid(column=1,row=5,sticky=tk.W, columnspan=2)
 
-    entry5 = ttk.Entry(window, justify='left',textvariable=a_var5)
-    entry5.grid(column=1,row=6,sticky=tk.W)
+    entry5 = ttk.Entry(window, justify='left',textvariable=a_var5, width=40)
+    entry5.grid(column=1,row=6,sticky=tk.W, columnspan=2)
 
     #functions for below buttons
     def addBtnClicked():
