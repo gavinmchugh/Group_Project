@@ -2,6 +2,7 @@ import pickle
 import tkinter as tk
 from tkinter import DISABLED, StringVar, ttk
 from datetime import date
+from turtle import bgcolor
 
 today=date.today()
 
@@ -172,7 +173,7 @@ def createGUI():
     window.title(today.strftime("%d/%m/%Y"))
     window.geometry('600x400+100+100')
     window.resizable(0,0)
-    window['background']= '#C7F4AD'
+    window['background']= '#FFD39B'
     window.iconbitmap('./paw.ico')
 
     #create column grid
@@ -182,7 +183,6 @@ def createGUI():
     window.columnconfigure(3,weight=1)
     window.columnconfigure(4,weight=1)
     window.columnconfigure(5,weight=1)
-    window.columnconfigure(6,weight=1)
 
     #start building elements/widgets
     appHeading = ttk.Label(window,text="Petsie!")
@@ -211,7 +211,8 @@ def createGUI():
     #this label0 should probably be hidden, as it is only the ID
     # it will be used for updating an existing entry and deleting an existing entry
     label0 = ttk.Label(window, text="ID NUM: ")
-    label0.grid(column=0,row=1,pady=10)
+    label0.grid(column=0,row=1,pady=10,)
+    
 
     label1 = ttk.Label(window, text="Name ")
     label1.grid(column=0,row=2,pady=10)
@@ -276,22 +277,21 @@ def createGUI():
         print("Exit Button Clicked")
         window.destroy()
 
-
     #buttons column - right
     addBtn = ttk.Button(window, text="Add",command=addBtnClicked)
-    addBtn.grid(column=6, row=1)
+    addBtn.grid(column=6, row=1, padx=10)
 
     UpdateBtn = ttk.Button(window, text="Update",command=UpdateBtnClicked)
-    UpdateBtn.grid(column=6, row=2)
+    UpdateBtn.grid(column=6, row=2, padx=10)
 
     DeleteBtn = ttk.Button(window, text="Delete",command=DeleteBtnClicked)
-    DeleteBtn.grid(column=6, row=3)
+    DeleteBtn.grid(column=6, row=3, padx=10)
 
     SearchBtn = ttk.Button(window, text="Search",command=SearchBtnClicked)
-    SearchBtn.grid(column=6, row=4)
+    SearchBtn.grid(column=6, row=4, padx=10)
 
     ExitBtn = ttk.Button(window, text="Exit",command=ExitBtnClicked)
-    ExitBtn.grid(column=6, row=5)
+    ExitBtn.grid(column=6, row=5, padx=10)
 
     ## BOTTOM BUTTON VARIABLES ##
     pageCurrent = 1
@@ -360,10 +360,10 @@ def createGUI():
     prevBtn.grid(column=1, row=7)
 
     pageEntry = ttk.Entry(window,textvariable=pageText,state=DISABLED)
-    pageEntry.grid(column=2,row=7)
+    pageEntry.grid(column=2,row=7, pady=10)
 
     nextBtn = ttk.Button(window, text="Next >",command=nextBtnClicked)
-    nextBtn.grid(column=3, row=7)
+    nextBtn.grid(column=3, row=7, padx=25)
 
     lastBtn = ttk.Button(window, text="Last >>",command=lastBtnClicked)
     lastBtn.grid(column=4, row=7)
